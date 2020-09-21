@@ -1,0 +1,52 @@
+Create event
+/// @description Инициализация
+var stringFile = file_text_open_read("test.txt");
+control_string = file_text_read_string(stringFile);
+file_text_close(stringFile);
+
+
+cursor_index = 1;
+inputed_char = "";
+
+mistake_count = 0;
+
+curX = room_width/2;
+
+cursorX = 0;
+____________
+Step event
+___________________________
+inputed_char = last_keyboard_char();
+
+if (inputed_char == string_char_at(control_string, cursor_index))
+{
+	cursor_index++;
+}
+else
+{
+	mistake_count++;
+	create_flying_string(cursorX, room_height/2, inputed_char);
+}
+
+inputed_char = "";
+________________________
+Отображение текста Draw GUI
+_____________________
+draw_set_font(fn_main);
+draw_set_color(c_white);
+draw_set_valign(fa_center);
+draw_set_halign(fa_left);
+
+var yy = room_height/2;
+
+var inputedWidth = string_width(string_copy(control_string, 1, cursor_index - 1));
+curX = lerp(curX, room_width/2 - inputedWidth, 0.1);
+
+
+draw_text(curX, yy, control_string);
+
+draw_set_color(c_green);
+var inputedText = string_copy(control_string, 1, cursor_index-1);
+cursorX = curX + string_width(inputedText);
+draw_text(curX, yy, inputedText);
+

@@ -1,0 +1,21 @@
+Start game
+Settings
+Instructions
+Go Back
+Difficulty (time to input)
+Easy (0.5 seconds per 1 symbol)
+Normal (0.3 seconds per 1 symbol)
+Hard (0.1 seconds per 1 symbol)
+You're in section 
+Go to section 
+Yes
+No
+That's fine, you'll make it
+Used scrolls count: 
+Inputted words count: 
+Passed time: 
+Words per minute: 
+Mistake count: 
+Scroll mouse wheel to move the word list
+Press ENTER to continue
+Hot keys:#F5 - game restart##Don't forget to change keyboard layout#before game starts.##Time will count after first inputted symbol of every scroll.#Try to enter quickly and without mistakes.#In folder "subjects" you can change your theme#And try it in the game.
